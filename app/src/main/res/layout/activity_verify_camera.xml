@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ff000000"
+    android:keepScreenOn="true"
+    tools:context="com.qalex.veinrec.MainActivity">
+
+    <com.serenegiant.widget.UVCCameraTextureView
+        android:id="@+id/camera_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+
+    <ImageView
+        android:id="@+id/frame_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/camera_view"
+        android:layout_alignLeft="@+id/camera_view"
+        android:layout_alignRight="@+id/camera_view"
+        android:layout_alignTop="@+id/camera_view"
+        android:src="@drawable/border"/>
+
+    <SurfaceView
+        android:id="@+id/result_view"
+        android:layout_width="320dp"
+        android:layout_height="240dp"
+        android:layout_marginRight="5dp"
+        android:visibility="visible"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+    <ToggleButton
+        android:id="@+id/camera_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/camera_view"
+        android:layout_alignLeft="@id/camera_view"
+        android:text="ToggleButton"/>
+
+
+    <RelativeLayout
+        android:id="@+id/value_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_alignLeft="@id/camera_view"
+        android:layout_alignRight="@id/camera_view"
+        android:background="#22ffffff"
+        android:visibility="invisible">
+
+        <ImageButton
+            android:id="@+id/reset_button"
+            android:layout_width="@dimen/sz_icon_camera_ctrl"
+            android:layout_height="@dimen/sz_icon_camera_ctrl"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher"/>
+
+        <SeekBar
+            android:id="@+id/setting_seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@+id/reset_button"
+            android:max="100"
+            android:progress="50"/>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BLACK"
+    tools:context="com.qalex.veinrec.MenuActivity"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter ID:"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/WHITE"
+            android:textSize="20sp"/>
+
+        <EditText
+            android:id="@+id/editTextID"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="0.70"
+            android:background="@color/WHITE" />
+        <!--TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose hand:"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/WHITE"
+            android:textSize="20sp"/>
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/btn_dropdown"
+            android:layout_marginLeft="10dp"
+            android:spinnerMode="dropdown"/-->
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_verify"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="Verify"/>
+    </LinearLayout>
+</RelativeLayout>
